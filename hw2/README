@@ -1,5 +1,115 @@
-Name: lolita kim
-CPSC4100 - Fall 2022
+ALGORITHM QUESTIONS:
+
+1. Problem: Counting Transactions Yielding a Capital Gain 
+ 
+Rabbit Jerry is interested in a stock RABJ and he downloads a list of N (2 ≤ N ≤ 105) stock prices in the 
+order of trading dates. The stock prices are integer numbers which could be a negative integer in the 
+rabbit stock market though. If he buys RABJ on a trading day and then sells it later on another 
+trading day  (buying and selling cannot happen on the same trade date), can you help him count the 
+number of transactions that yields a capital gain. A transaction includes a pair of the purchase and 
+sale prices. 
+ 
+The yield of a transaction is calculated by  subtracting the purchase price from the sale price. A 
+positive result means a transaction has a capital gain while a negative result means it has a loss. 
+ 
+Output the total number of transactions that yields a capital gain.  
+ 
+INPUT FORMAT (input arrives from the terminal / stdin): 
+ 
+First line contains N.  
+The next line contains N space-separated integers denoting the input sequence. The price ranges 
+from -1,000,000 to 1,000,000. 
+ 
+OUTPUT FORMAT (print output to the terminal / stdout): 
+ 
+A single line containing the total number of transactions that yield a capital gain. Note that the 
+output can be very large and cause integer overflow. So, you should use C++ long long. 
+
+
+SAMPLE INPUT: 
+ 
+7 
+100  7  19  34  1000  45 78 
+ 
+SAMPLE OUTPUT: 
+ 
+14   
+ 
+SCORING: 
+ 
+• Test cases 1-5 satisfy N≤1000.  
+• Test cases 6-10 satisfy N≤100,000. An O(N2) or worse algorithm is regarded to be failures of 
+these test cases, even though the program produces the correct results. We consider them 
+timeouts.  
+ 
+2. Problem: Maximum Capital Gain 
+ 
+Rabbit Jerry wonders if he can only make one transaction given the N (2 ≤ N ≤ 105) stock prices of 
+RABJ as descried in problem 1, what is the maximum capital gain?  
+ 
+Output the maximum capital gain for that transaction. 
+ 
+INPUT FORMAT (input arrives from the terminal / stdin): 
+ 
+First line contains N.  
+The next line contains N space-separated integers denoting the input sequence. The price ranges 
+from -1,000,000 to 1,000,000. 
+ 
+OUTPUT FORMAT (print output to the terminal / stdout): 
+ 
+A single line containing the maximum capital gain. 
+
+SAMPLE INPUT: 
+7 
+100  7  19  34  1000  45 78 
+ 
+SAMPLE OUTPUT: 
+993  
+ 
+SCORING: 
+ 
+• Test cases 1-5 satisfy N≤1000.  
+• Test cases 6-10 satisfy N≤100,000. An O(N2) or worse algorithm is regarded to be failures of 
+these test cases, even though the program produces the correct results. We consider them 
+timeouts. 
+
+3. Problem: Maximum Subarray Sum 
+ 
+Rabbit Jerry downloads the list of N (2 ≤ N ≤ 105) stock prices of RABJ and stores them into a circular 
+buffer/array in a clockwise manner (i.e., the first stock price follows the N-th stock price on the 
+circular buffer) starting from index position 0. It is worth pointing out that the stock prices can be 
+negative numbers in the rabbit stock market. He is curious about the maximum subarray sum over 
+this circular buffer. Certainly, the maximum subarray can possibly straddle over both index positions 
+0 and N-1.  
+ 
+Output the maximum subarray sum. The maximum subarray must contain at least one element. 
+ 
+INPUT FORMAT (input arrives from the terminal / stdin): 
+ 
+First line contains N.  
+The next line contains N space-separated integers denoting the input sequence. The price ranges 
+from -1,000,000 to 1,000,000. 
+ 
+OUTPUT FORMAT (print output to the terminal / stdout): 
+ 
+A single line containing the maximum subarray sum. Note that the output can cause integer 
+overflow. So you should use C++ long long. 
+
+SAMPLE INPUT: 
+7 
+100  -7  19  -34  1000  -45 78 
+ 
+SAMPLE OUTPUT: 
+1156 
+
+SCORING: 
+ 
+• Test cases 1-5 satisfy N≤1000.  
+• Test cases 6-10 satisfy N≤100,000. An O(N2) or worse algorithm is regarded to be failures of 
+these test cases, even though the program produces the correct results. We consider them 
+timeouts. 
+
+//Time complexity for the algorithm of each problem
 
 Problem 1:
 T(n) = O(nlogn)
