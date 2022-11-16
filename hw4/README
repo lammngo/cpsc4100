@@ -1,0 +1,142 @@
+CPSC 4100 HW #4 – Programming Assignment, Fall 2022 
+Dynamic Programming 
+30 points 
+ 
+Date assigned: Wednesday, 10/26/2022 
+Due: 11:59 pm, Friday, 11/04/2022 
+ 
+This programming assignment is focused on Dynamic Programming (DP). Unless otherwise specified, 
+you need to tackle the problems using DP. 
+Problems 1-3 are required to solve. 10 points each. 
+Bonus Problems 4-5 are optional. 5 extra points each. All-or-nothing policy is applied to the bonus 
+problems. 
+ 
+1. Problem: Ruby Dices I [Level: easy] 
+ 
+Rabbit Jerry is spending his vocation on an island named Hooplulu. Hooplulu is a wonderland rife 
+with N (1 ≤ N ≤ 1,000) types of ruby dices. Each ruby dice type costs different amounts of US dollars. 
+The number of dices for each type is infinite. Jerry wants to spend all his D (0 ≤ D ≤ 104) dollars on 
+these dices and bring them back home. However, he wants to minimize the number of dices he has 
+to carry back home after spending all D dollars. Note that multiple dices for each type are allowed to 
+be carried home.  
+ 
+Output the minimum number of dices Jerry will bring home for D dollars.  
+ 
+INPUT FORMAT (input arrives from the terminal / stdin): 
+ 
+First line contains N and D, separated by space.  
+The next line contains N space-separated integers denoting the prices for the N types of dices. The 
+price ranges from 1 to 10,000. It guarantees that one ruby dice type costs one US dollar. 
+ 
+OUTPUT FORMAT (print output to the terminal / stdout): 
+ 
+A single line containing the minimum number of dices Jerry will bring home. 
+ 
+REQUIRED COMMENTS ON THE PROGRAM FILE: 
+• Structure of optimal solutions 
+• Time efficiency 
+ 
+C++ PROGRAM NAME: 
+ 
+The C++ program name must be rubydice1.cpp 
+ 
+SAMPLE INPUT: 
+ 
+9 245 
+1 2 5 10 20 50 100 500 1000 
+ 
+SAMPLE OUTPUT: 
+ 
+5 
+ 
+ 
+ 
+2. Problem: Ruby Dices II [Level: Easy] 
+ 
+There are N types of ruby dices in Hooplulu. Each type i (0 ≤ i ≤ N-1) is associated with a weight wi 
+and value vi. Moreover, each type has an infinite number of dices. Rabbit Jerry wants to pack some 
+dices into his magical travel backpack. His backpack can take a load of up to C (in terms of weights) 
+but can accommodate any size of dices. He wants to load a subset of ruby dices into his backpack to 
+maximize the value with two constraints: (1) the total weight of ruby dices cannot exceed C; and (2) 
+for each type of ruby dices, he can only take at most 2 dices.   
+ 
+Output the maximum value that Jerry can load into his backpack. 
+ 
+INPUT FORMAT (input arrives from the terminal / stdin): 
+ 
+First line contains N (1 ≤ N ≤ 1000) and C (1 ≤ C ≤ 104), separated by space.  
+The next N lines each contains two space-separated integers denoting weight wi (1 ≤ wi ≤ 1000) and 
+value vi (1 ≤ vi ≤ 1000) of each ruby dice type. 
+ 
+OUTPUT FORMAT (print output to the terminal / stdout): 
+ 
+A single line containing the maximum value. 
+ 
+REQUIRED COMMENTS ON THE PROGRAM FILE: 
+• Structure of optimal solutions 
+• Time efficiency 
+ 
+C++ PROGRAM NAME: 
+ 
+The C++ program name must be rubydice2.cpp 
+ 
+SAMPLE INPUT: 
+ 
+10 50 
+4 7 
+8 6 
+4 6 
+7 3 
+10 2 
+3 8 
+1 10 
+4 7 
+1 7 
+3 7 
+ 
+SAMPLE OUTPUT: 
+ 
+110  
+ 
+ 
+ 
+ 
+3. Problem: Ruby Dice Chain [Level: Intermediate] 
+ 
+Rabbit Jerry has collected N ruby dices and carved a number on each dice. He links the N dices into a 
+chain. You can view the chain as a list of numbers, starting with index position 0 to N-1. Given this 
+sequence of N numbers on the dices, Jerry  can remove any number (0..N-1) of  dices from the chain 
+to form a subsequence (the relative order of the remaining dices is retained). There are 2N-1 such 
+non-empty subsequences. Jerry is particularly interested in the subsequences with strictly 
+decreasing numbers.  
+ 
+Output the maximum length of the strictly decreasing subsequence.   
+ 
+INPUT FORMAT (input arrives from the terminal / stdin): 
+ 
+First line contains N (1 ≤ N ≤ 1000).  
+The next line contains N space-separated integers in range [0, 109], denoting numbers carved on the 
+chained dices from index position 0 to N-1. 
+ 
+OUTPUT FORMAT (print output to the terminal / stdout): 
+ 
+A single line containing the maximum value. 
+ 
+REQUIRED COMMENTS ON THE PROGRAM FILE: 
+• Structure of optimal solutions 
+• Time efficiency 
+ 
+C++ PROGRAM NAME: 
+ 
+The C++ program name must be chain.cpp 
+ 
+SAMPLE INPUT: 
+ 
+10 
+3 6 7 5 3 5 6 2 9 1 
+ 
+SAMPLE OUTPUT: 
+ 
+5 
+ 
+The longest strictly decreasing subsequence is: 7 5 3 2 1.
